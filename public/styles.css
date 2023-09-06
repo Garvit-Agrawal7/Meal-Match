@@ -1,0 +1,15 @@
+.form-control{
+    background-color: #F4EEEE;
+    width: 144.5%;
+    min-height: 50px;
+    border: none
+}
+
+body {
+    background-color: #FFE17B
+}
+
+.inp {
+    background-color: #CECE5A;
+    min-height: 50px
+}
