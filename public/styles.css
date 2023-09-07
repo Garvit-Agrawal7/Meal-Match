@@ -17,3 +17,8 @@ body {
 #randrec {
     margin-left: 50px
 }
+
+.strikethrough {
+    text-decoration: line-through;
+    background-color: #F8F8F8;
+}
