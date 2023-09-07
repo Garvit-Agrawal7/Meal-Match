@@ -19,21 +19,23 @@
     </form>
 </div>
 <% if (locals.recipe && locals.dish) {%>
-    <div class="container-fluid my-5">
+    <div class="container-fluid my-5 ">
         <div class="row">
             <div class="col-md-3">
                 <div class="list-group">
                     <label class="list-group-item d-flex align-items-center justify-content-center gap-3 bg-secondary text-white">
                         <strong>Ingredient List</strong>
                     </label>
-                    <% for (let i = 0; i < ingredients.length; i++) { %>
-                        <label class="list-group-item ingredient-item d-flex gap-3">
-                            <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
-                            <span class="pt-1 form-checked-content">
+                    <div class="list-group" style="max-height: 500px; overflow-y: scroll">
+                        <% for (let i = 0; i < ingredients.length; i++) { %>
+                            <label class="list-group-item ingredient-item d-flex gap-3">
+                                <input class="form-check-input flex-shrink-0" type="checkbox" value="" style="font-size: 1.375em;">
+                                <span class="pt-1 form-checked-content">
                             <strong><%= ingredients[i] %></strong>
                         </span>
-                        </label>
-                    <% } %>
+                            </label>
+                        <% } %>
+                    </div>
                 </div>
             </div>
             <div class="col-md-9">
@@ -41,7 +43,7 @@
                     <label class="list-group-item d-flex align-items-center justify-content-center gap-3 bg-secondary text-white">
                         <strong>Recipe</strong>
                     </label>
-                    <div class="p-5 text-center bg-body-tertiary rounded-3">
+                    <div class="p-5 text-center bg-body-tertiary rounded-3" style="max-height: 500px;  overflow:hidden; overflow-y: scroll;">
                         <h1 class="text-body-emphasis"><%=dish%></h1>
                         <p class="lead">
                             <%=recipe%>
@@ -69,6 +71,5 @@
         });
     });
 </script>
-
 </body>
 </html>
